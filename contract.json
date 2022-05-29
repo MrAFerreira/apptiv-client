@@ -130,12 +130,7 @@
           "405": {
             "description": "Invalid input"
           }
-        },
-        "security": [
-          {
-            "petstore_auth": ["write:pets", "read:pets"]
-          }
-        ]
+        }
       }
     },
 
@@ -392,16 +387,7 @@
           }
         }
       },
-      "required": [
-        "id",
-        "title",
-        "description",
-        "location",
-        "category",
-        "price",
-        "startDate",
-        "endDate"
-      ],
+      "required": ["id", "title", "description", "location", "category", "price", "startDate"],
       "xml": {
         "name": "Event"
       }
@@ -450,7 +436,7 @@
           "type": "array",
           "items": {
             "type": "integer",
-            "description": "Id of a user"
+            "description": "Id of the events the user attends"
           }
         },
         "createdEvents": {
