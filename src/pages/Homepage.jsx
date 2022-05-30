@@ -1,5 +1,5 @@
 //This is a dummy component. There will not be a Homepage (the main page is the events page)
-import apptivLogo from '../assets/apptiv-logo.svg';
+import apptivLogo from '../assets/images/apptiv-logo.svg';
 
 function Homepage() {
   return (
