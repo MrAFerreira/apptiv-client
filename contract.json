@@ -60,12 +60,7 @@
               "$ref": "#/definitions/Event"
             }
           }
-        },
-        "security": [
-          {
-            "petstore_auth": ["write:pets", "read:pets"]
-          }
-        ]
+        }
       }
     },
     "/events/{eventId}": {
@@ -84,12 +79,7 @@
           "405": {
             "description": "Invalid input"
           }
-        },
-        "security": [
-          {
-            "petstore_auth": ["write:pets", "read:pets"]
-          }
-        ]
+        }
       },
       "put": {
         "tags": ["events"],
@@ -102,7 +92,7 @@
           {
             "in": "body",
             "name": "body",
-            "description": "Pet object that needs to be added to the store",
+            "description": "Even info to be updated",
             "required": true,
             "schema": {
               "$ref": "#/definitions/Event"
@@ -125,7 +115,6 @@
         "tags": ["events"],
         "summary": "Delete a specific event by ID",
         "description": "",
-        "operationId": "deleteEvent",
         "responses": {
           "405": {
             "description": "Invalid input"
@@ -144,7 +133,7 @@
           {
             "name": "username",
             "in": "path",
-            "description": "The name that needs to be fetched. Use user1 for testing. ",
+            "description": "The name that needs to be fetched. Use John Smith for testing. ",
             "required": true,
             "type": "string"
           }
@@ -215,6 +204,37 @@
         "responses": {
           "400": {
             "description": "Invalid username supplied"
+          },
+          "404": {
+            "description": "User not found"
+          }
+        }
+      }
+    },
+    "/user/friends": {
+      "get": {
+        "tags": ["user"],
+        "summary": "Get the users friends",
+        "description": "",
+        "produces": ["application/json", "application/xml"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The id of the user to get the friends ",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Invalid id supplied"
           },
           "404": {
             "description": "User not found"
