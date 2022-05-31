@@ -67,7 +67,7 @@ function CategoriesCreateEvent() {
       <ul>
         {catArr.map((cat) => {
           return (
-            <li>
+            <li key={cat}>
               <input type="checkbox" id={cat} name={cat} value={cat} />
               <label for={cat}>{cat}</label>
             </li>
