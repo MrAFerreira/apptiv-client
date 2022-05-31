@@ -28,10 +28,6 @@ import ErrorPage from './pages/ErrorPage';
 function App() {
   return (
     <div className="App">
-      <h1>Testind</h1>
-      <p>or login with</p>
-      <MutlipageForm />
-
       <Header />
       <Routes>
         <Route path="/" element={<SplashScreenPage />} />
@@ -48,12 +44,6 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Appbar />
-      <EventsCard
-        title="yoga"
-        startDate="24. May 2022"
-        price="3"
-        image="https://images.unsplash.com/photo-1639333586638-fb4e185084b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
-      />
     </div>
   );
 }

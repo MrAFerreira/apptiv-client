@@ -1,40 +1,32 @@
-import axios from "axios";
+import axios from 'axios';
 
 class UserService {
-    constructor () {
-        this.api = axios.create({
-            baseUrl: process.env.REACT_APP_BASE_URL || "http://localhost:5005", 
-        });
+  constructor() {
+    this.api = axios.create({
+      baseUrl: process.env.REACT_APP_BASE_URL || 'http://localhost:5005',
+    });
     // Automatically set JWT token in the headers for every request
-    this.api.interceptors.request.use((config) => {
-    // Retrieve the JWT token from the local storage
-    const storedToken = localStorage.getItem("authToken");
 
-    if (storedToken) {
-      config.headers = { Authorization: `Bearer ${storedToken}` };
-    }
+    this.storedToken = localStorage.getItem('authToken');
 
-    return config;
-  });
+    this.headers = { Authorization: `Bearer ${this.storedToken}` };
+  }
 
-    }
+  currentUser = (username) => {
+    return this.api.get(`/api/user/${username}`);
+  };
 
-    currentUser = async () => {
-        return this.api.get("/api/user/{username}");
-      };
-    
-      updateCurrentUser = async (requestBody) => {
-        return this.api.put("/api/user/{username}", requestBody);
-      };
+  updateCurrentUser = (requestBody, userId) => {
+    return this.api.put(`/api/user/${userId}`, requestBody);
+  };
 
-      deleteCurrentUser = async (requestBody) => {
-        return this.api.delete("/api/user/{username}", requestBody);
-      };
+  deleteCurrentUser = (userId) => {
+    return this.api.delete(`/api/user/${userId}/delete`);
+  };
 
-      getCurrentUserFriends = async () => {
-        return this.api.get("/api/user/{username}/friends");
-      };
-
+  getCurrentUserFriends = (username) => {
+    return this.api.get(`/api/user/${username}/friends`);
+  };
 }
 
 // Create one instance of the service
