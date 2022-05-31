@@ -48,7 +48,7 @@ const GoalsTag = styled.div`
   }
 `;
 
-function GoalSettingFlow() {
+function GoalSettingFlow({ goals, setGoals, nextStep }) {
   let [count, setCount] = useState(0);
 
   const addCount = () => {
@@ -65,6 +65,12 @@ function GoalSettingFlow() {
         return prevCount - 1;
       }
     });
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setGoals(count);
+    nextStep();
   };
 
   return (
@@ -84,7 +90,7 @@ function GoalSettingFlow() {
         </button>
       </div>
 
-      <ButtonBottom>Continue</ButtonBottom>
+      <button onClick={handleClick}>Continue</button>
     </GoalsTag>
   );
 }
