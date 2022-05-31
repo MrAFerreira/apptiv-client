@@ -1,5 +1,6 @@
 import "./App.css";
 import LoginPage from "./pages/LoginPage";
+import MapWrapper from "./components/MapWrapper";
 //Package imports
 
 import { Routes, Route } from "react-router-dom";
@@ -10,9 +11,9 @@ import WelcomePage from "./pages/WelcomePage";
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Routes>
-        <Route path="/" element={<WelcomePage />} />
+        <Route path='/' element={<WelcomePage />} />
       </Routes>
       <Appbar />
     </div>
