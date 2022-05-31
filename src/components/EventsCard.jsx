@@ -60,7 +60,7 @@ function EventsCard(props) {
         <img className="cardImage" src={image} alt="event" />
       </div>
       <div className="date-price-container">
-        <span className="date">{startDate}</span>{" "}
+        <span className="date">{startDate}</span>
         <span class="price">{price} €</span>
       </div>
       <h3 className="title">{title}</h3>
