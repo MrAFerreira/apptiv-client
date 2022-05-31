@@ -6,6 +6,7 @@ import EventsCard from "./components/EventsCard";
 //Components and Pages imports
 import Appbar from "./components/Appbar";
 import Header from "./components/Header";
+import MutlipageForm from "./components/MutlipageForm";
 /* Welcome/initialize pages */
 import WelcomePage from "./pages/WelcomePage";
 import SplashScreenPage from "./pages/SplashScreenPage";
@@ -32,7 +33,8 @@ function App() {
     <div className="App">
       <h1>Testind</h1>
       <p>or login with</p>
-    
+<MutlipageForm />
+      
 
       <Header />
       <Routes>
