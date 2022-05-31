@@ -6,7 +6,6 @@ function WelcomePage() {
   return (
     <div>
       <img src={apptivLogo} alt="apptiv logo" />
-      <InterestComponent />
     </div>
   );
 }
