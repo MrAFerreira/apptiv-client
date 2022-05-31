@@ -5,6 +5,7 @@ import EventsCard from "./components/EventsCard";
 
 //Components and Pages imports
 import Appbar from "./components/Appbar";
+import Header from "./components/Header";
 /* Welcome/initialize pages */
 import WelcomePage from "./pages/WelcomePage";
 import SplashScreenPage from "./pages/SplashScreenPage";
@@ -18,6 +19,7 @@ import EventListPage from "./pages/EventListPage";
 import EventDetailsPage from "./pages/EventDetailsPage";
 import EventCreationPage from "./pages/EventCreationPage";
 import BookingsPage from "./pages/BookingsPage";
+import ButtonBottom from "./components/ButtonBottom";
 /* Statistic pages */
 import ProgressPage from "./pages/ProgressPage";
 /* Error page */
@@ -28,6 +30,7 @@ function App() {
     <div className="App">
       <h1>Testind</h1>
       <p>or login with</p>
+      <Header />
       <Routes>
         <Route path="/" element={<SplashScreenPage />} />
         <Route path="/welcome" element={<WelcomePage />} />
