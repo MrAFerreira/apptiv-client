@@ -23,12 +23,19 @@ import BookingsPage from './pages/BookingsPage';
 /* Statistic pages */
 import ProgressPage from './pages/ProgressPage';
 /* Error page */
+<<<<<<< HEAD
 import ErrorPage from './pages/ErrorPage';
+=======
+import ErrorPage from "./pages/ErrorPage";
+>>>>>>> 19952f8d7621bb9b8eba9e616f4c5f046ae69cda
 
 function App() {
   return (
     <div className="App">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 19952f8d7621bb9b8eba9e616f4c5f046ae69cda
       <main>
         <Routes>
           <Route path="/" element={<SplashScreenPage />} />
@@ -45,6 +52,7 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>
+<<<<<<< HEAD
 =======
       <h1>Testind</h1>
       <p>or login with</p>
@@ -66,6 +74,8 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 >>>>>>> 8757bc43a82dfb47abc00347d681a9079a6a28a9
+=======
+>>>>>>> 19952f8d7621bb9b8eba9e616f4c5f046ae69cda
       <Appbar />
     </div>
   );
