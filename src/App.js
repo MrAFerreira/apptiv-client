@@ -1,6 +1,5 @@
 import "./App.css";
 import LoginPage from "./pages/LoginPage";
-import MapWrapper from "./components/MapWrapper";
 //Package imports
 
 import { Routes, Route } from "react-router-dom";
