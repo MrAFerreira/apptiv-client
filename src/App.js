@@ -26,12 +26,16 @@ import ProgressPage from "./pages/ProgressPage";
 /* Error page */
 import ErrorPage from "./pages/ErrorPage";
 
+
+
 function App() {
   return (
     <div className="App">
       <h1>Testind</h1>
       <p>or login with</p>
-      <MutlipageForm />
+<MutlipageForm />
+      
+
       <Header />
       <Routes>
         <Route path="/" element={<SplashScreenPage />} />
