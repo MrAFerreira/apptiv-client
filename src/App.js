@@ -1,7 +1,7 @@
-import "./App.css";
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
 //Package imports
-
-import { Routes, Route } from "react-router-dom";
 
 //Components and Pages imports
 import Appbar from "./components/Appbar";
@@ -26,6 +26,8 @@ import ErrorPage from "./pages/ErrorPage";
 function App() {
   return (
     <div className="App">
+      <h1>Testind</h1>
+      <p>or login with</p>
       <Routes>
         <Route path="/" element={<SplashScreenPage />} />
         <Route path="/welcome" element={<WelcomePage />} />
