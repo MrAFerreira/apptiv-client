@@ -16,7 +16,6 @@ function LoginPage(props) {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    console.log("clickIn");
     const body = {
       email: email,
       password: password,
@@ -29,7 +28,7 @@ function LoginPage(props) {
       <h1>Login</h1>
 
       <form onSubmit={handleLoginSubmit}>
-        <label>Email adress:</label>
+        <label>Email address:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
         <label>Password:</label>
