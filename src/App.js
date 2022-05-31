@@ -28,21 +28,22 @@ import ErrorPage from "./pages/ErrorPage";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/" element={<SplashScreenPage />} />
-        <Route path="/welcome" element={<WelcomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/signup" element={<SignUpFormPage />} />
-        <Route path="/onboarding-signup" element={<SignUpOnBoardingPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/event-list" element={<EventListPage />} />
-        <Route path="/event-details/:id" element={<EventDetailsPage />} />
-        <Route path="/create-event" element={<EventCreationPage />} />
-        <Route path="/my-bookings" element={<BookingsPage />} />
-        <Route path="/your-progress" element={<ProgressPage />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<SplashScreenPage />} />
+          <Route path="/welcome" element={<WelcomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/signup" element={<SignUpFormPage />} />
+          <Route path="/onboarding-signup" element={<SignUpOnBoardingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/event-list" element={<EventListPage />} />
+          <Route path="/event-details/:id" element={<EventDetailsPage />} />
+          <Route path="/create-event" element={<EventCreationPage />} />
+          <Route path="/my-bookings" element={<BookingsPage />} />
+          <Route path="/your-progress" element={<ProgressPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </main>
       <Appbar />
     </div>
   );
