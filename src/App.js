@@ -19,7 +19,6 @@ import EventListPage from "./pages/EventListPage";
 import EventDetailsPage from "./pages/EventDetailsPage";
 import EventCreationPage from "./pages/EventCreationPage";
 import BookingsPage from "./pages/BookingsPage";
-import ButtonBottom from "./components/ButtonBottom";
 /* Statistic pages */
 import ProgressPage from "./pages/ProgressPage";
 /* Error page */
