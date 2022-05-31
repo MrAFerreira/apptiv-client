@@ -24,10 +24,12 @@ import ButtonBottom from "./components/ButtonBottom";
 import ProgressPage from "./pages/ProgressPage";
 /* Error page */
 import ErrorPage from "./pages/ErrorPage";
+import CircleGraph from "./components/CircleGraph";
 
 function App() {
   return (
     <div className="App">
+      <CircleGraph />
       <h1>Testind</h1>
       <p>or login with</p>
       <Header />
