@@ -6,10 +6,12 @@ const StyledButton = styled.button`
   border-style: none;
   color: ${({ theme }) => theme.colors.white || " #ffffff"};
   width: 100%;
+  height: 3rem;
   margin: 1rem;
   border-radius: 8px;
-  padding: 12px 64px 12px 64;
+  padding: 80px 20px 80px 20;
   text-align: center;
+  font-size: 22px;
 `;
 
 function ButtonBottom({ children }) {
