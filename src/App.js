@@ -6,13 +6,13 @@ import { Routes, Route } from "react-router-dom";
 
 //Components and Pages imports
 import Appbar from "./components/Appbar";
-import Homepage from "./pages/Homepage";
+import WelcomePage from "./pages/WelcomePage";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<WelcomePage />} />
       </Routes>
       <Appbar />
       <EventsCard
