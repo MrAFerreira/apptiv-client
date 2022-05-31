@@ -1,6 +1,5 @@
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
 //Package imports
 
 //Components and Pages imports
