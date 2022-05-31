@@ -48,6 +48,7 @@ function WelcomePage() {
   return (
     <StyledWelcome className="welcome1">
       {/* <img src={apptivLogo} alt="apptiv logo" /> */}
+
       <h1>Welcome!</h1>
       <div className="tabler-view">
         <img src={SportsScore} alt="apptiv logo" />

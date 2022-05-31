@@ -85,8 +85,6 @@ function EventCreation() {
   const [picture, setPicture] = useState("");
   const [showEndDate, setShowEndDate] = useState(false);
 
-  const hiddenFileInput = React.useRef(null);
-
   const toggleEndDate = () => {
     setShowEndDate(true);
   };
@@ -174,7 +172,7 @@ function EventCreation() {
           )}
         </button>
 
-        <CategoriesCreateEvent />
+        <CategoriesCreateEvent handleCategories={handleCategories} />
 
         <label htmlFor="price">Price</label>
         <input

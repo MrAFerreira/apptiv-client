@@ -59,7 +59,7 @@ const CategoriesTag = styled.div`
   }
 `;
 
-function CategoriesCreateEvent() {
+function CategoriesCreateEvent(props) {
   return (
     <CategoriesTag>
       <label htmlFor="categories">Categories*</label>
@@ -68,7 +68,13 @@ function CategoriesCreateEvent() {
         {catArr.map((cat) => {
           return (
             <li key={cat}>
-              <input type="checkbox" id={cat} name={cat} value={cat} />
+              <input
+                onChange={props.handleCategories}
+                type="checkbox"
+                id={cat}
+                name={cat}
+                value={cat}
+              />
               <label for={cat}>{cat}</label>
             </li>
           );

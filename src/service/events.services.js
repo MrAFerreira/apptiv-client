@@ -1,37 +1,30 @@
-import axios from "axios";
+import axios from 'axios';
 
 class EventService {
   constructor() {
     this.api = axios.create({
-      baseUrl: process.env.REACT_APP_BASE_URL || "http://localhost:5005",
+      baseURL: process.env.REACT_APP_BASE_URL,
     });
-    // Automatically set JWT token in the headers for every request
-    this.api.interceptors.request.use((config) => {
-      // Retrieve the JWT token from the local storage
-      const storedToken = localStorage.getItem("authToken");
 
-      if (storedToken) {
-        config.headers = { Authorization: `Bearer ${storedToken}` };
-      }
+    this.storedToken = localStorage.getItem('authToken');
 
-      return config;
-    });
+    this.headers = { Authorization: `Bearer ${this.storedToken}` };
   }
 
-  getAllEvents = async () => {
-    return this.api.get("/api/events");
+  getAllEvents = () => {
+    return this.api.get('/api/events', this.headers);
   };
 
   createEvent = async () => {
-    return this.api.post("/api/events");
+    return this.api.post('/api/events', this.headers);
   };
 
-  updateCurrentEvent = async (requestBody) => {
-    return this.api.put("/api/events/{eventId}", requestBody);
+  updateCurrentEvent = async (requestBody, eventId) => {
+    return this.api.put(`/api/events/${eventId}`, requestBody, this.headers);
   };
 
-  deleteCurrentEvent = async (requestBody) => {
-    return this.api.delete("/api/events/{eventId}", requestBody);
+  deleteCurrentEvent = async (eventId) => {
+    return await this.api.delete(`/api/events/${eventId}`, this.headers);
   };
 }
 

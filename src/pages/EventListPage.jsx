@@ -1,27 +1,31 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import eventService from "../service/events.services";
-import EventsCard from "../components/EventsCard";
+import { useState, useEffect } from 'react';
+import eventService from '../service/events.services';
+import EventsCard from '../components/EventsCard';
 
 function EventListPage() {
   const [events, setEvents] = useState([]);
 
   // We set this effect will run only once, after the initial render
   // by setting the empty dependency array - []
-  useEffect(() => {
-    const response = eventService.getAllEvents();
+  const getEvents = async () => {
+    let response = await eventService.getAllEvents();
     setEvents(response.data);
+  };
+
+  useEffect(() => {
+    getEvents();
   }, []);
 
   return (
     <div>
-      {events.map((event) => {
-        return (
-        <>
-          <EventsCard {...event} />
-        </>
-        )
-      })}
+      {events &&
+        events.map((event) => {
+          return (
+            <>
+              <EventsCard {...event} />
+            </>
+          );
+        })}
     </div>
   );
 }
