@@ -24,14 +24,13 @@ import ButtonBottom from "./components/ButtonBottom";
 import ProgressPage from "./pages/ProgressPage";
 /* Error page */
 import ErrorPage from "./pages/ErrorPage";
-import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
     <div className="App">
       <h1>Testind</h1>
       <p>or login with</p>
-      <SearchBar/>
+
       <Header />
       <Routes>
         <Route path="/" element={<SplashScreenPage />} />
