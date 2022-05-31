@@ -1,8 +1,8 @@
-import React, { useState, useContext, useEffect } from 'react';
-import EventsCard from '../components/EventsCard';
-import { AuthContext } from '../context/auth.context';
-import userService from '../service/user.services';
-
+import React, { useState, useContext, useEffect } from "react";
+import EventsCard from "../components/EventsCard";
+import { AuthContext } from "../context/auth.context";
+import userService from "../service/user.services";
+import Filter from "../components/Filter";
 function BookingsPage() {
   const [bookings, setBookings] = useState([]);
   const { user } = useContext(AuthContext);
@@ -21,6 +21,7 @@ function BookingsPage() {
       {bookings.map((booking) => {
         return <EventsCard {...booking} />;
       })}
+      <Filter />
     </div>
   );
 }
