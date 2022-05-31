@@ -1,9 +1,13 @@
 import React from 'react'
 import calendary from '../assets/images/calendar_today.svg'
 import styled from 'styled-components'
+import ButtonBottom from '../components/ButtonBottom'
+import Appbar from '../components/Appbar'
+import MapWrapper from '../components/MapWrapper'
 
 const EventDetailTag = styled.div`
 text-align: left;
+margin: 0;
 
 .cover-image {
     width: auto;
@@ -68,11 +72,6 @@ function EventDetailsPage({event}) {
         'default', {weekday: 'long'});
 
 
-
-
-      
-
-
   return (
    
     <EventDetailTag> 
@@ -90,6 +89,9 @@ function EventDetailsPage({event}) {
             <h4>Location</h4>
         <p>{event.location.address}</p>
         </section>
+        <MapWrapper center={event.location.geo} />
+        <ButtonBottom>Going</ButtonBottom>
+        <Appbar /> 
     </EventDetailTag>
     
   )

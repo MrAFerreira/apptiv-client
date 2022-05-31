@@ -1,43 +1,47 @@
 import './App.css';
-//Package imports
-
 import { Routes, Route } from 'react-router-dom';
+//Package imports
+import EventsCard from './components/EventsCard';
 
 //Components and Pages imports
 import Appbar from './components/Appbar';
-import Homepage from './pages/Homepage';
+import Header from './components/Header';
+import MutlipageForm from './components/MutlipageForm';
+/* Welcome/initialize pages */
+import WelcomePage from './pages/WelcomePage';
+import SplashScreenPage from './pages/SplashScreenPage';
+import AboutPage from './pages/AboutPage';
+/* Auth pages */
+import SignUpFormPage from './pages/SignUpFormPage';
+import SignUpOnBoardingPage from './pages/SignUpOnBoardingPage';
+import LoginPage from './pages/LoginPage';
+/* Events pages */
+import EventListPage from './pages/EventListPage';
 import EventDetailsPage from './pages/EventDetailsPage';
-
-
-
-const eventSample = {
-  id: "627a225cfd5a526ce58b23ec",
-  title: "Yoga @ Heden Sta. Apolónia",
-  description: "1 hour yoga class at Heden Sta. Apolónia",
-  location: {
-    address: "Praceta do Mar nº52 2775-780 Lisboa",
-    geo: {
-      lat: -34.397,
-      lng: 150.644
-    }
-  },
-  category: "Health & Wellbeing",
-  price: 0,
-  startDate: "2022-06-10T08:29:16.506+00:00",
-  image: "https://images.unsplash.com/photo-1639333586638-fb4e185084b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
-  attendees: [
-    "627a1e9db189e86c144d6986",
-    "627a1e9db189e86c144d6985",
-    "627a1e9db189e86c144d6987"
-  ]
-}
+import EventCreationPage from './pages/EventCreationPage';
+import BookingsPage from './pages/BookingsPage';
+/* Statistic pages */
+import ProgressPage from './pages/ProgressPage';
+/* Error page */
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (
     <div className="App">
-    <EventDetailsPage event={eventSample}/>
+      <Header />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<SplashScreenPage />} />
+        <Route path="/welcome" element={<WelcomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/signup" element={<SignUpFormPage />} />
+        <Route path="/onboarding-signup" element={<SignUpOnBoardingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/event-list" element={<EventListPage />} />
+        <Route path="/event-details/:id" element={<EventDetailsPage />} />
+        <Route path="/create-event" element={<EventCreationPage />} />
+        <Route path="/my-bookings" element={<BookingsPage />} />
+        <Route path="/your-progress" element={<ProgressPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Appbar />
     </div>
