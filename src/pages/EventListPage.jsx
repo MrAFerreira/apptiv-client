@@ -1,10 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import eventService from "../service/events.services";
 import EventsCard from "../components/EventsCard";
-
-const API_URL = "http://localhost:5005";
 
 function EventListPage() {
   const [events, setEvents] = useState([]);
@@ -19,10 +16,11 @@ function EventListPage() {
   return (
     <div>
       {events.map((event) => {
-        return;
+        return (
         <>
           <EventsCard {...event} />
-        </>;
+        </>
+        )
       })}
     </div>
   );
