@@ -30,7 +30,7 @@ const InterestContainer = styled.div`
   gap: 4px;
 `;
 
-function InterestComponent() {
+function InterestComponent({handleCheck}) {
   return (
     <InterestContainer>
       {interestsMatrix.map((item) => {
