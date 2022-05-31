@@ -23,7 +23,7 @@ const FormTag = styled.div`
   img {
     position: absolute;
     top: 12px;
-    left: 10px;
+    left: 60px;
     pointer-events: none;
   }
 `;
