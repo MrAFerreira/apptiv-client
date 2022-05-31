@@ -30,6 +30,7 @@ function App() {
     <div className="App">
       <h1>Testind</h1>
       <p>or login with</p>
+      <EventCreationPage />
       <Header />
       <Routes>
         <Route path="/" element={<SplashScreenPage />} />
