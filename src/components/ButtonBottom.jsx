@@ -15,10 +15,6 @@ const StyledButton = styled.button`
 `;
 
 function ButtonBottom({ children }) {
-  return (
-    <div>
-      <StyledButton>{children}</StyledButton>
-    </div>
-  );
+  return <StyledButton>{children}</StyledButton>;
 }
 export default ButtonBottom;
