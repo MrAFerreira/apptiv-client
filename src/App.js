@@ -5,6 +5,7 @@ import EventsCard from "./components/EventsCard";
 
 //Components and Pages imports
 import Appbar from "./components/Appbar";
+import Header from "./components/Header";
 /* Welcome/initialize pages */
 import WelcomePage from "./pages/WelcomePage";
 import SplashScreenPage from "./pages/SplashScreenPage";
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
       <h1>Testind</h1>
       <p>or login with</p>
+      <Header />
       <Routes>
         <Route path="/" element={<SplashScreenPage />} />
         <Route path="/welcome" element={<WelcomePage />} />
