@@ -6,7 +6,7 @@ function Header() {
     <header>
       <div className="div-for-header-flex"></div>
       <img src={apptivLogo} alt="apptiv logo" />
-      {/* <img src={avatar} alt="avatar" /> */}
+      {/* <Avatar /> */}
     </header>
   );
 }
