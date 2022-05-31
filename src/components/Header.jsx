@@ -1,13 +1,24 @@
 import React from "react";
 import apptivLogo from "../assets/images/apptiv-logo.svg";
+import styled from "styled-components";
+
+const HeaderTag = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .apptiv-logo {
+    width: 60px;
+  }
+`;
 
 function Header() {
   return (
-    <header>
+    <HeaderTag>
       <div className="div-for-header-flex"></div>
-      <img src={apptivLogo} alt="apptiv logo" />
-      {/* <Avatar /> */}
-    </header>
+      <img className="apptiv-logo" src={apptivLogo} alt="apptiv logo" />
+      <div> {/* <Avatar /> */}</div>
+    </HeaderTag>
   );
 }
 
