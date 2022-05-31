@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import ButtonBottom from "./ButtonBottom";
 
 const GoalsTag = styled.div`
   display: flex;
@@ -21,17 +22,29 @@ const GoalsTag = styled.div`
     align-items: center;
   }
 
+  .changing-count p {
+    font-weight: 800;
+    font-size: 2.5rem;
+  }
+
   .changing-buttons {
+    font-size: 1.8rem;
+    color: ${({ theme }) => theme.colors.mainOrange};
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0.2rem solid yellow;
+    border: 0.1rem solid ${({ theme }) => theme.colors.mainOrange};
     background-color: transparent;
     border-radius: 50%;
     padding: 1.3rem;
-    margin: 1rem;
+    margin: 1.5rem;
     width: 20px;
     height: 20px;
+  }
+
+  .continue-button {
+    width: inherit;
+    align-self: center;
   }
 `;
 
@@ -71,7 +84,7 @@ function GoalSettingFlow() {
         </button>
       </div>
 
-      <button>Styled Continue Button</button>
+      <ButtonBottom>Continue</ButtonBottom>
     </GoalsTag>
   );
 }
