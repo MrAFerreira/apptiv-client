@@ -1,4 +1,5 @@
 import "./App.css";
+import LoginPage from "./pages/LoginPage";
 //Package imports
 import EventsCard from "./components/EventsCard";
 
