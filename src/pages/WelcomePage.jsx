@@ -6,6 +6,7 @@ import TablerView from "../assets/images/tabler_viewfinder.svg";
 import Run from "../assets/images/bx_run.svg";
 import styled from "styled-components";
 
+
 const StyledWelcome = styled.div`
   h1 {
     margin: 50px 0 50px 0;
@@ -65,6 +66,8 @@ function WelcomePage() {
         </span>
       </div>
       <p>But most importantly...</p>
+
+  
       <h4>HAVE FUN!</h4>
       <ButtonBottom> Let's go </ButtonBottom>
     </StyledWelcome>
