@@ -8,10 +8,9 @@ function MutlipageForm() {
   const [step, setStep] = useState(1);
 
   // topics, goals, contacts:
-  const [topics, setTopics] = useState([]);
-  const [goals, setGoals] = useState(0);
+  const [topics, setTopics] = useState([]); 
+  const [goals, setGoals] = useState(0); 
   const [contacts, setContacts] = useState([]);
-  console.log(goals);
 
   /*   const prevStep = () => {
     if (step === 1) return;
@@ -39,7 +38,6 @@ function MutlipageForm() {
           // prevStep={prevStep}
           nextStep={nextStep}
           setTopics={setTopics}
-          topics={topics}
         />
       );
     case 2:
