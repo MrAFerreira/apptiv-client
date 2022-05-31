@@ -5,7 +5,7 @@ import ButtonBottom from "../components/ButtonBottom";
 
 import { Link } from "react-router-dom";
 
-const SplashTag = styled.main`
+const SplashTag = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
