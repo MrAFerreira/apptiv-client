@@ -8,10 +8,15 @@ body{
     box-sizing:border-box;
     font-family: Avenir;
     width:390px;
-    min-height:844px;
+    min-height:100vh;
     display:flex;
     flex-flow:column wrap;
     align-items:center;
+    justify-content:center;
+
+}
+main{
+   padding:3rem 1.5rem 20vh;
 }
 h1, h2, h3, h4, h5, h6{
 font-family: Faro Variable Trial;

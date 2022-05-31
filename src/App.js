@@ -23,11 +23,37 @@ import BookingsPage from './pages/BookingsPage';
 /* Statistic pages */
 import ProgressPage from './pages/ProgressPage';
 /* Error page */
+<<<<<<< HEAD
 import ErrorPage from './pages/ErrorPage';
+=======
+import ErrorPage from "./pages/ErrorPage";
+>>>>>>> 19952f8d7621bb9b8eba9e616f4c5f046ae69cda
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 19952f8d7621bb9b8eba9e616f4c5f046ae69cda
+      <main>
+        <Routes>
+          <Route path="/" element={<SplashScreenPage />} />
+          <Route path="/welcome" element={<WelcomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/signup" element={<SignUpFormPage />} />
+          <Route path="/onboarding-signup" element={<SignUpOnBoardingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/event-list" element={<EventListPage />} />
+          <Route path="/event-details/:id" element={<EventDetailsPage />} />
+          <Route path="/create-event" element={<EventCreationPage />} />
+          <Route path="/my-bookings" element={<BookingsPage />} />
+          <Route path="/your-progress" element={<ProgressPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </main>
+<<<<<<< HEAD
+=======
       <h1>Testind</h1>
       <p>or login with</p>
       <MutlipageForm />
@@ -47,13 +73,10 @@ function App() {
         <Route path="/your-progress" element={<ProgressPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+>>>>>>> 8757bc43a82dfb47abc00347d681a9079a6a28a9
+=======
+>>>>>>> 19952f8d7621bb9b8eba9e616f4c5f046ae69cda
       <Appbar />
-      <EventsCard
-        title="yoga"
-        startDate="24. May 2022"
-        price="3"
-        image="https://images.unsplash.com/photo-1639333586638-fb4e185084b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
-      />
     </div>
   );
 }
