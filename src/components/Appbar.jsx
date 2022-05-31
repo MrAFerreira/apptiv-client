@@ -12,13 +12,13 @@ const NavBarBottom = styled.nav`
   align-items: center;
   flex-direction: row;
   background-color: black;
-  width: 100vw;
+
+  width: 100%;
   height: 15vh;
-  left: 0;
-  right: 0;
+
   position: fixed;
   bottom: 0;
-
+  left: 0;
   border-radius: 24px 24px 0px 0px;
 `;
 
