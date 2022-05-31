@@ -1,9 +1,11 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 //Package imports
+import EventsCard from "./components/EventsCard";
 
 //Components and Pages imports
 import Appbar from "./components/Appbar";
+import Header from "./components/Header";
 /* Welcome/initialize pages */
 import WelcomePage from "./pages/WelcomePage";
 import SplashScreenPage from "./pages/SplashScreenPage";
@@ -17,6 +19,7 @@ import EventListPage from "./pages/EventListPage";
 import EventDetailsPage from "./pages/EventDetailsPage";
 import EventCreationPage from "./pages/EventCreationPage";
 import BookingsPage from "./pages/BookingsPage";
+import ButtonBottom from "./components/ButtonBottom";
 /* Statistic pages */
 import ProgressPage from "./pages/ProgressPage";
 /* Error page */
@@ -27,6 +30,7 @@ function App() {
     <div className="App">
       <h1>Testind</h1>
       <p>or login with</p>
+      <Header />
       <Routes>
         <Route path="/" element={<SplashScreenPage />} />
         <Route path="/welcome" element={<WelcomePage />} />
@@ -42,6 +46,12 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Appbar />
+      <EventsCard
+        title="yoga"
+        startDate="24. May 2022"
+        price="3"
+        image="https://images.unsplash.com/photo-1639333586638-fb4e185084b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+      />
     </div>
   );
 }
